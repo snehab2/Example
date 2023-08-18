@@ -10,15 +10,23 @@ import SwiftUI
 struct ScoreView: View {
     @EnvironmentObject var settings: GameSettings
 
-        var body: some View {
+    var body: some View {
+        NavigationStack {
             VStack {
                 Button("Increase Score") {
                     settings.score += 1
                 }
                 Text("Score: \(settings.score)")
+                NavigationLink {
+                    ScoreView()
+                } label: {
+                    Text("Show Content View")
+                }
             }
-            .environmentObject(settings)
+            
         }
+        .environmentObject(settings)
+    }
         
 }
 
