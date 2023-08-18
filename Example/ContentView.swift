@@ -24,6 +24,7 @@ struct ContentView: View {
                         NavigationLink(destination: QuestionOne()) {
                             Text("Next question")
                         }
+                        Text("Score: \(settings.score)")
 
                         
                     }

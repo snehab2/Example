@@ -11,8 +11,15 @@ struct ScoreView: View {
     @EnvironmentObject var settings: GameSettings
 
         var body: some View {
-            Text("Score: \(settings.score)")
+            VStack {
+                Button("Increase Score") {
+                    settings.score += 1
+                }
+                Text("Score: \(settings.score)")
+            }
+            .environmentObject(settings)
         }
+        
 }
 
 struct ScoreView_Previews: PreviewProvider {
