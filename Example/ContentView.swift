@@ -13,7 +13,7 @@ class GameSettings: ObservableObject {
 
 struct ContentView: View {
     @StateObject var settings = GameSettings()
-
+    @EnvironmentObject var settings1: GameSettings
     var body: some View {
         NavigationStack {
                     VStack {
@@ -24,7 +24,7 @@ struct ContentView: View {
                         NavigationLink(destination: QuestionOne()) {
                             Text("Next question!")
                         }
-                        Text("Score: \(settings.score)")
+                        Text("Score: \(settings1.score)")
 
                         
                     }

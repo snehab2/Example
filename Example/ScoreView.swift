@@ -18,7 +18,7 @@ struct ScoreView: View {
                 }
                 Text("Score: \(settings.score)")
                 NavigationLink {
-                    ScoreView()
+                    ContentView()
                 } label: {
                     Text("Show Content View")
                 }
