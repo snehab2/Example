@@ -22,7 +22,7 @@ struct ContentView: View {
                             settings.score += 1
                         }
                         NavigationLink(destination: QuestionOne()) {
-                            Text("Next question")
+                            Text("Next question!")
                         }
                         Text("Score: \(settings.score)")
 
